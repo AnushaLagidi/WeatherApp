@@ -56,6 +56,7 @@ const DateTime = ({ current, lat, lon, timezone }) => {
                 <Text style={styles.timezone}>{timezone}</Text>
                 <Text style={styles.latlong}>{lat}N {lon}E</Text>
             </View>
+
         </View>
     )
 }
@@ -101,9 +102,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     weatherItemTitle: {
-        color: '#eee',
+        color: '#fff',
         fontSize: 14,
-        fontWeight: '100'
+        fontWeight: '500'
     }
 })
 
