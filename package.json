@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@react-native-community/geolocation": "^3.0.3",
+    "json-loader": "^0.5.7",
+    "moment-timezone": "^0.5.38",
     "react": "18.1.0",
     "react-native": "0.70.5"
   },

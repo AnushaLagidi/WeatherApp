@@ -1,9 +1,12 @@
-import { View, Text } from 'react-native'
-import React from 'react';
-import { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import React, { useEffect, useState } from 'react';
+
+
+import DateTime from './components/DateTime'
+import WeatherScroll from './components/WeatherScroll'
 import Geolocation from '@react-native-community/geolocation';
 const API_KEY = '49cc8c821cd2aff9af04c9f98c36eb74';
-
+const img = require('./assets/image.png')
 const App = () => {
   const [position, setPosition] = useState<any>({});
   const [data, setData] = useState({});
@@ -32,10 +35,27 @@ const App = () => {
 
 
   return (
-    <View>
-      <Text>App</Text>
+    // <View>
+    //   <Text>{data.lat}</Text>
+    // </View>
+    <View style={styles.container}>
+      <ImageBackground source={img} style={styles.image} >
+        <DateTime current={data.current} timezone={data.timezone} lat={data.lat} lon={data.lon} />
+        <WeatherScroll weatherData={data.daily} />
+      </ImageBackground>
     </View>
-  )
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center"
+  }
+});
 
 export default App
