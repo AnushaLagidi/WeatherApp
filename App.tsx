@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 
 
 import DateTime from './components/DateTime';
-import Model from './components/Model'
 import WeatherScroll from './components/WeatherScroll'
 import Geolocation from '@react-native-community/geolocation';
 const API_KEY = '49cc8c821cd2aff9af04c9f98c36eb74';
@@ -43,7 +42,6 @@ const App = () => {
       <ImageBackground source={img} style={styles.image} >
         <DateTime current={data.current} timezone={data.timezone} lat={data.lat} lon={data.lon} />
         <WeatherScroll weatherData={data.daily} />
-        <Model current={data.current} timezone={data.timezone} />
       </ImageBackground>
     </View>
   );

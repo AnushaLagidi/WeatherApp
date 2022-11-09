@@ -47,10 +47,10 @@ const DateTime = ({ current, lat, lon, timezone }) => {
                 </View>
                 <View style={styles.weatherItemContainer}>
                     <WeatherItem title="Temperature" value={current ? current.temp : ""} unit="&#176;C" />
-                    <WeatherItem title="Humidity" value={current ? current.humidity : ""} unit="%" />
+                    {/* <WeatherItem title="Humidity" value={current ? current.humidity : ""} unit="%" />
                     <WeatherItem title="Pressure" value={current ? current.pressure : ""} unit="hPA" />
                     <WeatherItem title="Sunrise" value={current ? moment.tz(current.sunrise * 1000, timezone).format('HH:mm') : ""} unit="am" />
-                    <WeatherItem title="Sunset" value={current ? moment.tz(current.sunset * 1000, timezone).format('HH:mm') : ""} unit="pm" />
+                    <WeatherItem title="Sunset" value={current ? moment.tz(current.sunset * 1000, timezone).format('HH:mm') : ""} unit="pm" /> */}
                 </View>
             </View>
             <View style={styles.rightAlign}>
@@ -99,12 +99,12 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     weatherItem: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'space-between',
     },
     weatherItemTitle: {
         color: '#fff',
-        fontSize: 14,
+        fontSize: 28,
         fontWeight: '500'
     }
 })
