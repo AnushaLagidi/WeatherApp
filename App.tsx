@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import React, { useEffect, useState } from 'react';
 
-
+//this is the try 
 import DateTime from './components/DateTime';
 import WeatherScroll from './components/WeatherScroll'
 import Geolocation from '@react-native-community/geolocation';
